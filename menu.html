@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Our Menu - Spice & Stories | Authentic Indian Dishes & Specialties</title>
+    <meta name="description" content="Explore our diverse menu featuring authentic Indian cuisine, signature dishes, starters, mains, desserts, and beverages. Order online or dine-in.">
+    <meta name="keywords" content="indian menu, restaurant menu, biryani, butter chicken, curry, vegetarian dishes">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍛</text></svg>">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍛</span>
+                <span class="logo-text">Spice & Stories</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html#reservation" class="nav-link btn-reserve">Reserve Table</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-subtitle">Discover Our Flavors</span>
+                <h1 class="page-title">Our <span class="gradient-text">Menu</span></h1>
+                <p class="page-description">A curated selection of authentic Indian delicacies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Filter -->
+    <section class="menu-filter-section">
+        <div class="container">
+            <div class="menu-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-utensils"></i> All Dishes
+                </button>
+                <button class="filter-btn" data-filter="starters">
+                    <i class="fas fa-fire"></i> Starters
+                </button>
+                <button class="filter-btn" data-filter="mains">
+                    <i class="fas fa-bowl-rice"></i> Main Course
+                </button>
+                <button class="filter-btn" data-filter="desserts">
+                    <i class="fas fa-ice-cream"></i> Desserts
+                </button>
+                <button class="filter-btn" data-filter="drinks">
+                    <i class="fas fa-mug-hot"></i> Beverages
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-section">
+        <div class="container">
+            
+            <!-- Starters -->
+            <div class="menu-category" data-aos="fade-up">
+                <div class="category-header">
+                    <h2 class="category-title">
+                        <span class="category-icon">🔥</span>
+                        Starters
+                    </h2>
+                    <div class="category-line"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="starters" data-aos="zoom-in">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop" alt="Samosa" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Crispy Samosa</h3>
+                                <span class="menu-price">₹120</span>
+                            </div>
+                            <p class="menu-description">Golden pastry filled with spiced potatoes and peas</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.7
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="starters" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop" alt="Paneer Tikka" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                            <span class="popular-badge">Popular</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Paneer Tikka</h3>
+                                <span class="menu-price">₹350</span>
+                            </div>
+                            <p class="menu-description">Grilled cottage cheese marinated in aromatic spices</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="starters" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="Chicken Kebab" loading="lazy">
+                            <span class="nonveg-badge">🔴</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chicken Seekh Kebab</h3>
+                                <span class="menu-price">₹380</span>
+                            </div>
+                            <p class="menu-description">Minced chicken skewers with traditional spices</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Course -->
+            <div class="menu-category" data-aos="fade-up">
+                <div class="category-header">
+                    <h2 class="category-title">
+                        <span class="category-icon">🍛</span>
+                        Main Course
+                    </h2>
+                    <div class="category-line"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="mains" data-aos="zoom-in">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop" alt="Butter Chicken" loading="lazy">
+                            <span class="nonveg-badge">🔴</span>
+                            <span class="popular-badge">Chef's Special</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Butter Chicken</h3>
+                                <span class="menu-price">₹450</span>
+                            </div>
+                            <p class="menu-description">Tender chicken in rich, creamy tomato sauce</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 5.0
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&h=300&fit=crop" alt="Biryani" loading="lazy">
+                            <span class="nonveg-badge">🔴</span>
+                            <span class="popular-badge">Bestseller</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Hyderabadi Biryani</h3>
+                                <span class="menu-price">₹550</span>
+                            </div>
+                            <p class="menu-description">Fragrant basmati rice with succulent meat</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop" alt="Dal Makhani" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Dal Makhani</h3>
+                                <span class="menu-price">₹320</span>
+                            </div>
+                            <p class="menu-description">Slow-cooked black lentils in creamy gravy</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.7
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="mains" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop" alt="Rogan Josh" loading="lazy">
+                            <span class="nonveg-badge">🔴</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Lamb Rogan Josh</h3>
+                                <span class="menu-price">₹620</span>
+                            </div>
+                            <p class="menu-description">Kashmiri specialty with tender lamb chunks</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" data-aos="fade-up">
+                <div class="category-header">
+                    <h2 class="category-title">
+                        <span class="category-icon">🍰</span>
+                        Desserts
+                    </h2>
+                    <div class="category-line"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="desserts" data-aos="zoom-in">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop" alt="Gulab Jamun" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Gulab Jamun</h3>
+                                <span class="menu-price">₹150</span>
+                            </div>
+                            <p class="menu-description">Soft milk dumplings in rose-flavored syrup</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.6
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="desserts" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop" alt="Kulfi" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Kesar Pista Kulfi</h3>
+                                <span class="menu-price">₹180</span>
+                            </div>
+                            <p class="menu-description">Traditional Indian ice cream with saffron</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.7
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="desserts" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop" alt="Rasmalai" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Rasmalai</h3>
+                                <span class="menu-price">₹160</span>
+                            </div>
+                            <p class="menu-description">Cottage cheese patties in sweetened milk</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-category" data-aos="fade-up">
+                <div class="category-header">
+                    <h2 class="category-title">
+                        <span class="category-icon">☕</span>
+                        Beverages
+                    </h2>
+                    <div class="category-line"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="drinks" data-aos="zoom-in">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop" alt="Masala Chai" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Masala Chai</h3>
+                                <span class="menu-price">₹80</span>
+                            </div>
+                            <p class="menu-description">Aromatic spiced tea with fresh herbs</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.5
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="drinks" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&h=300&fit=crop" alt="Mango Lassi" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Mango Lassi</h3>
+                                <span class="menu-price">₹120</span>
+                            </div>
+                            <p class="menu-description">Creamy yogurt drink with fresh mangoes</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.9
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="drinks" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop" alt="Fresh Lime" loading="lazy">
+                            <span class="veg-badge">🟢</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Fresh Lime Soda</h3>
+                                <span class="menu-price">₹90</span>
+                            </div>
+                            <p class="menu-description">Refreshing lime juice with sparkling water</p>
+                            <div class="menu-item-footer">
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i> 4.4
+                                </div>
+                                <button class="btn-order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍛</span>
+                        <span class="logo-text">Spice & Stories</span>
+                    </div>
+                    <p class="footer-description">
+                        Experience authentic Indian cuisine in a modern setting.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul class="footer-hours">
+                        <li><span>Mon - Fri</span><span>11 AM - 11 PM</span></li>
+                        <li><span>Sat - Sun</span><span>10 AM - 12 AM</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i><a href="tel:+919876543210">+91-9876543210</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@spiceandstories.com">info@spiceandstories.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Spice & Stories. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

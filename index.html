@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Spice & Stories - Modern Indian Restaurant | Authentic Cuisine & Fine Dining</title>
+    <meta name="description" content="Experience authentic Indian cuisine at Spice & Stories. Book your table today for an unforgettable dining experience where flavor meets culture.">
+    <meta name="keywords" content="restaurant, indian cuisine, fine dining, food, reservation, authentic food">
+    <meta name="author" content="Spice & Stories">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spiceandstories.com/">
+    <meta property="og:title" content="Spice & Stories - Modern Indian Restaurant">
+    <meta property="og:description" content="Where Flavor Meets Culture - Authentic Indian Cuisine">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spiceandstories.com/">
+    <meta property="twitter:title" content="Spice & Stories - Modern Indian Restaurant">
+    <meta property="twitter:description" content="Where Flavor Meets Culture - Authentic Indian Cuisine">
+    <meta property="twitter:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍛</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Spice & Stories",
+        "image": "https://spiceandstories.com/assets/images/restaurant.jpg",
+        "description": "Modern Indian Restaurant offering authentic cuisine",
+        "servesCuisine": "Indian",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Culinary Lane",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "400001",
+            "addressCountry": "IN"
+        },
+        "telephone": "+91-9876543210",
+        "openingHours": "Mo-Su 11:00-23:00"
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- ========== PRELOADER ========== -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-icon">🍛</span>
+            <div class="loader-text">Spice & Stories</div>
+        </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍛</span>
+                <span class="logo-text">Spice & Stories</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#reservation" class="nav-link btn-reserve">Reserve Table</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-video-bg">
+            <div class="video-overlay"></div>
+            <!-- Fallback gradient background -->
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="hero-subtitle floating">Fine Dining Experience</span>
+                    <h1 class="hero-title">
+                        Where Flavor<br>
+                        <span class="gradient-text">Meets Culture</span>
+                    </h1>
+                    <p class="hero-description">
+                        Embark on a culinary journey through authentic Indian flavors,
+                        crafted with passion and served with love.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#reservation" class="btn btn-primary btn-glow">
+                            <span>Book a Table</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="menu.html" class="btn btn-secondary">
+                            <span>View Menu</span>
+                            <i class="fas fa-utensils"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-scroll" data-aos="fade-up" data-aos-delay="500">
+                    <div class="scroll-indicator">
+                        <span>Scroll</span>
+                        <div class="scroll-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <span class="float-item" style="top: 20%; left: 10%;">🌶️</span>
+            <span class="float-item" style="top: 60%; right: 15%;">🍃</span>
+            <span class="float-item" style="bottom: 20%; left: 20%;">✨</span>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES SECTION ========== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Fresh ingredients sourced daily for authentic taste</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in culinary arts</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Chefs</h3>
+                    <p>Traditional recipes with modern techniques</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Quick Service</h3>
+                    <p>Fast delivery without compromising quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SIGNATURE DISHES ========== -->
+    <section class="signature-dishes" id="dishes">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Specialties</span>
+                <h2 class="section-title">Signature <span class="gradient-text">Dishes</span></h2>
+                <p class="section-description">Handcrafted recipes passed down through generations</p>
+            </div>
+            
+            <div class="dishes-grid">
+                <div class="dish-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=600&fit=crop" alt="Butter Chicken" loading="lazy">
+                        <div class="dish-overlay">
+                            <a href="#" class="dish-link">View Details</a>
+                        </div>
+                        <span class="dish-badge">Popular</span>
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Butter Chicken</h3>
+                            <span class="dish-price">₹450</span>
+                        </div>
+                        <p class="dish-description">Tender chicken in rich, creamy tomato sauce</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=600&fit=crop" alt="Biryani" loading="lazy">
+                        <div class="dish-overlay">
+                            <a href="#" class="dish-link">View Details</a>
+                        </div>
+                        <span class="dish-badge special">Chef's Special</span>
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Hyderabadi Biryani</h3>
+                            <span class="dish-price">₹550</span>
+                        </div>
+                        <p class="dish-description">Aromatic basmati rice with succulent meat</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dish-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&h=600&fit=crop" alt="Paneer Tikka" loading="lazy">
+                        <div class="dish-overlay">
+                            <a href="#" class="dish-link">View Details</a>
+                        </div>
+                        <span class="dish-badge veg">Veg</span>
+                    </div>
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Paneer Tikka</h3>
+                            <span class="dish-price">₹350</span>
+                        </div>
+                        <p class="dish-description">Grilled cottage cheese with spices</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.6)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta" data-aos="fade-up">
+                <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESERVATION SECTION ========== -->
+    <section class="reservation-section" id="reservation">
+        <div class="container">
+            <div class="reservation-grid">
+                <div class="reservation-content" data-aos="fade-right">
+                    <span class="section-subtitle">Book Your Table</span>
+                    <h2 class="section-title">Make a <span class="gradient-text">Reservation</span></h2>
+                    <p class="section-description">
+                        Experience an unforgettable dining journey. Reserve your table now 
+                        and let us take you on a culinary adventure.
+                    </p>
+                    
+                    <div class="reservation-features">
+                        <div class="res-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant Confirmation</span>
+                        </div>
+                        <div class="res-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Special Occasions Welcome</span>
+                        </div>
+                        <div class="res-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Private Dining Available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reservation-info">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="info-label">Call Us</span>
+                                <a href="tel:+919876543210">+91-9876543210</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="info-label">Opening Hours</span>
+                                <span>11:00 AM - 11:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reservation-form-container" data-aos="fade-left">
+                    <form class="reservation-form" id="reservationForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i>
+                                Full Name
+                            </label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email Address
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i>
+                                    Phone
+                                </label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+91-XXXXXXXXXX">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests">
+                                    <i class="fas fa-users"></i>
+                                    Guests
+                                </label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5+">5+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">
+                                    <i class="fas fa-calendar"></i>
+                                    Date
+                                </label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time">
+                                    <i class="fas fa-clock"></i>
+                                    Time
+                                </label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i>
+                                Special Requests
+                            </label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any special requests or dietary requirements?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">
+                            <span>Confirm Reservation</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What People Say</span>
+                <h2 class="section-title">Customer <span class="gradient-text">Reviews</span></h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Absolutely amazing experience! The butter chicken was the best I've ever had. 
+                        The ambiance is perfect for a romantic dinner."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Priya Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Every dish is a masterpiece! The chef's attention to detail is incredible. 
+                        Highly recommend the biryani and paneer tikka."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://i.pravatar.cc/100?img=7" alt="Rahul Verma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Verma</h4>
+                            <span>Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "A true celebration of Indian cuisine! The service is impeccable and 
+                        the flavors are authentic. Will definitely come back!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Ananya Desai">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ananya Desai</h4>
+                            <span>Chef</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍛</span>
+                        <span class="logo-text">Spice & Stories</span>
+                    </div>
+                    <p class="footer-description">
+                        Experience authentic Indian cuisine in a modern setting. 
+                        Where tradition meets innovation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#reservation">Reservations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Opening Hours</h3>
+                    <ul class="footer-hours">
+                        <li>
+                            <span>Monday - Friday</span>
+                            <span>11:00 AM - 11:00 PM</span>
+                        </li>
+                        <li>
+                            <span>Saturday - Sunday</span>
+                            <span>10:00 AM - 12:00 AM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Culinary Lane, Mumbai, Maharashtra 400001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919876543210">+91-9876543210</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@spiceandstories.com">info@spiceandstories.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Spice & Stories. All rights reserved. | Designed with ❤️ by Muthumanickam Digital Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/reservation.js"></script>
+    
+</body>
+</html>
