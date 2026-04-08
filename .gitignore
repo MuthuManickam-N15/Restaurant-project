@@ -105,3 +105,4 @@ Thumbs.db
 
 # Render
 render.yaml
+.env*.local
