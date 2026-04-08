@@ -2,11 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "**/*.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/menu.html",
+      "dest": "/menu.html"
+    },
+    {
+      "src": "/about.html",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/contact.html",
+      "dest": "/contact.html"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
