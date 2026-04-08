@@ -446,8 +446,14 @@ class ReservationSystem {
         confirmBtn.disabled = true;
         
         try {
-            // Send reservation to backend
-            const response = await fetch('https://your-backend-url.onrender.com/api/reservations', {
+            // TEMPORARY: Show message that backend is not deployed yet
+            // TODO: Replace with actual API call once backend is deployed
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+            
+            // For now, just show success without making API call
+            // Uncomment below when backend is deployed:
+            /*
+            const response = await fetch('https://your-render-backend-url.onrender.com/api/reservations', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -468,6 +474,7 @@ class ReservationSystem {
             }
             
             const result = await response.json();
+            */
             
             // Close modal
             this.closeModal(modal);
@@ -478,7 +485,7 @@ class ReservationSystem {
             // Reset form
             this.form.reset();
             
-            console.log('Reservation created:', result);
+            console.log('Reservation submitted (backend not deployed yet):', details);
             
         } catch (error) {
             console.error('Error submitting reservation:', error);
@@ -488,7 +495,7 @@ class ReservationSystem {
             confirmBtn.disabled = false;
             
             // Show error notification
-            this.showNotification('Failed to create reservation. Please try again.', 'error');
+            this.showNotification('Reservation system is currently under maintenance. Please call us directly at +91-9876543210 to make a reservation.', 'error');
         }
     }
     
