@@ -138,8 +138,30 @@ class Navigation {
     }
 }
 
-// Initialize Navigation
-const navigation = new Navigation();
+// ========== APP INITIALIZATION ==========
+function initializeApp() {
+    // Initialize Navigation
+    const navigation = window.navigation = new Navigation();
+    
+    // Initialize other critical components after Navigation
+    setTimeout(() => {
+        const scrollToTop = window.scrollToTop = new ScrollToTop();
+        const imageLoader = window.imageLoader = new ImageLoader();
+        const menuFilter = window.menuFilter = new MenuFilter();
+        const counterAnimation = window.counterAnimation = new CounterAnimation();
+        const contactFormValidator = window.contactFormValidator = new FormValidator('#contactForm');
+        const orderSystem = window.orderSystem = new OrderSystem();
+        const parallax = window.parallax = new Parallax();
+    }, 10);
+}
+
+// Execute on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    // DOM already loaded
+    setTimeout(initializeApp, 0);
+}
 
 // ========== SCROLL TO TOP BUTTON ==========
 class ScrollToTop {
@@ -181,28 +203,38 @@ class ScrollToTop {
     }
 }
 
-const scrollToTop = new ScrollToTop();
+// Now instantiated in initializeApp() function
+// const scrollToTop = new ScrollToTop();
 
 // ========== SMOOTH SCROLLING ==========
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        
-        if (href === '#' || href === '#!') return;
-        
-        const target = $(href);
-        
-        if (target) {
-            e.preventDefault();
-            const offsetTop = target.offsetTop - 80;
+function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
             
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+            if (href === '#' || href === '#!') return;
+            
+            const target = $(href);
+            
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.offsetTop - 80;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
+}
+
+// Call smooth scrolling setup on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupSmoothScrolling);
+} else {
+    setupSmoothScrolling();
+}
 
 // ========== AOS INITIALIZATION ==========
 function initAOS() {
@@ -290,7 +322,8 @@ class ImageLoader {
     }
 }
 
-const imageLoader = new ImageLoader();
+// Now instantiated in initializeApp() function
+// const imageLoader = new ImageLoader();
 
 // ========== MENU FILTER ==========
 class MenuFilter {
@@ -391,7 +424,8 @@ class MenuFilter {
     }
 }
 
-const menuFilter = new MenuFilter();
+// Now instantiated in initializeApp() function
+// const menuFilter = new MenuFilter();
 
 // ========== COUNTER ANIMATION (STATS) ==========
 class CounterAnimation {
@@ -446,7 +480,8 @@ class CounterAnimation {
     }
 }
 
-const counterAnimation = new CounterAnimation();
+// Now instantiated in initializeApp() function
+// const counterAnimation = new CounterAnimation();
 
 // ========== FORM VALIDATION ==========
 class FormValidator {
@@ -639,8 +674,8 @@ class FormValidator {
     }
 }
 
-// Initialize Contact Form Validator
-const contactFormValidator = new FormValidator('#contactForm');
+// Now instantiated in initializeApp() function
+// const contactFormValidator = new FormValidator('#contactForm');
 
 // ========== ORDER SYSTEM ==========
 class OrderSystem {
@@ -714,7 +749,8 @@ class OrderSystem {
     }
 }
 
-const orderSystem = new OrderSystem();
+// Now instantiated in initializeApp() function
+// const orderSystem = new OrderSystem();
 
 // ========== PARALLAX EFFECT (Optional) ==========
 class Parallax {
@@ -750,7 +786,8 @@ class Parallax {
     }
 }
 
-const parallax = new Parallax();
+// Now instantiated in initializeApp() function
+// const parallax = new Parallax();
 
 // ========== PERFORMANCE MONITORING ==========
 window.addEventListener('load', () => {
