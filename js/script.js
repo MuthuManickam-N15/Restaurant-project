@@ -297,6 +297,7 @@ class MenuFilter {
     constructor() {
         this.filterBtns = $$('.filter-btn');
         this.menuItems = $$('.menu-item');
+        this.menuCategories = $$('.menu-category');
         
         if (this.filterBtns.length > 0) {
             this.init();
@@ -306,6 +307,23 @@ class MenuFilter {
     init() {
         this.filterBtns.forEach(btn => {
             btn.addEventListener('click', () => this.filter(btn));
+        });
+        
+        // Ensure all items are visible initially
+        this.showAll();
+    }
+    
+    showAll() {
+        this.menuItems.forEach(item => {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+        });
+        
+        this.menuCategories.forEach(category => {
+            category.style.display = 'block';
+            category.style.opacity = '1';
+            category.style.transform = 'translateY(0)';
         });
     }
     
@@ -335,6 +353,40 @@ class MenuFilter {
                     }, 300);
                 }
             });
+            
+            // Hide/show categories based on visible items
+            this.updateCategoryVisibility(category);
+        });
+    }
+    
+    updateCategoryVisibility(category) {
+        this.menuCategories.forEach(categoryDiv => {
+            const itemsInCategory = categoryDiv.querySelectorAll('.menu-item');
+            
+            // Check if this category should be visible based on the filter
+            let shouldShow = false;
+            if (category === 'all') {
+                shouldShow = itemsInCategory.length > 0;
+            } else {
+                // Check if any item in this category matches the filter
+                shouldShow = Array.from(itemsInCategory).some(item => 
+                    item.dataset.category === category
+                );
+            }
+            
+            if (shouldShow) {
+                categoryDiv.style.display = 'block';
+                setTimeout(() => {
+                    categoryDiv.style.opacity = '1';
+                    categoryDiv.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                categoryDiv.style.opacity = '0';
+                categoryDiv.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    categoryDiv.style.display = 'none';
+                }, 300);
+            }
         });
     }
 }

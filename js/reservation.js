@@ -445,8 +445,30 @@ class ReservationSystem {
         confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
         confirmBtn.disabled = true;
         
-        // Simulate API call (replace with actual backend call)
-        setTimeout(() => {
+        try {
+            // Send reservation to backend
+            const response = await fetch('https://your-backend-url.onrender.com/api/reservations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: details.name,
+                    email: details.email,
+                    phone: details.phone,
+                    guests: details.guests,
+                    date: details.date,
+                    time: details.time,
+                    message: details.message
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error('Failed to create reservation');
+            }
+            
+            const result = await response.json();
+            
             // Close modal
             this.closeModal(modal);
             
@@ -456,17 +478,18 @@ class ReservationSystem {
             // Reset form
             this.form.reset();
             
-            // Log reservation (in production, send to backend)
-            console.log('Reservation confirmed:', details);
+            console.log('Reservation created:', result);
             
-            // Optional: Send confirmation email via backend API
-            // await fetch('/api/reservations', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(details)
-            // });
+        } catch (error) {
+            console.error('Error submitting reservation:', error);
             
-        }, 2000);
+            // Reset button
+            confirmBtn.innerHTML = originalHTML;
+            confirmBtn.disabled = false;
+            
+            // Show error notification
+            this.showNotification('Failed to create reservation. Please try again.', 'error');
+        }
     }
     
     showSuccessNotification(details) {

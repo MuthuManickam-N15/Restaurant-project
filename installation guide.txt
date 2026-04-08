@@ -1,0 +1,130 @@
+Step-by-Step Installation Guide
+Prerequisites
+Node.js (v16 or higher) - Download from nodejs.org
+Git - Download from git-scm.com
+Supabase account - Sign up at supabase.com
+1. Clone the Repository
+
+git clone https://github.com/your-username/spice-stories-restaurant.git
+cd spice-stories-restaurant
+
+2. Set Up Supabase Database
+Go to supabase.com and create a new project
+In your Supabase dashboard, go to SQL Editor
+Copy and run the migration SQL from supabase-migration.sql:
+
+-- Create reservations table
+CREATE TABLE reservations (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  guests INTEGER NOT NULL,
+  reservation_date DATE NOT NULL,
+  reservation_time TIME NOT NULL,
+  message TEXT,
+  status VARCHAR(50) DEFAULT 'confirmed',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Create index for better query performance
+CREATE INDEX idx_reservations_date ON reservations(reservation_date);
+CREATE INDEX idx_reservations_email ON reservations(email);
+
+-- Enable Row Level Security (RLS)
+ALTER TABLE reservations ENABLE ROW LEVEL SECURITY;
+
+-- Create policy to allow inserts (for public reservations)
+CREATE POLICY "Allow public inserts" ON reservations
+  FOR INSERT WITH CHECK (true);
+
+-- Create policy to allow reads (for admin)
+CREATE POLICY "Allow authenticated reads" ON reservations
+  FOR SELECT USING (auth.role() = 'authenticated');
+
+Go to Settings > API in your Supabase dashboard
+Copy your Project URL and anon public key
+
+3. Set Up Backend
+
+cd backend
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env
+
+Edit the .env file with your Supabase credentials:
+
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_ANON_KEY=your-anon-key-here
+PORT=5000
+FRONTEND_URL=http://localhost:3000
+NODE_ENV=development
+
+4. Run Backend Locally
+
+# Development mode (with auto-restart)
+npm run dev
+
+# Or production mode
+npm start
+
+The backend will run on http://localhost:5000
+
+5. Set Up Frontend
+The frontend is static HTML/CSS/JS, so no installation needed. Just open index.html in your browser.
+
+For local development with a server (optional):
+
+# If you have Python installed
+python -m http.server 3000
+
+# Or use any static server
+npx serve . -p 3000
+
+6. Test the Application
+Open your browser and go to http://localhost:3000 (or wherever your frontend is served)
+Navigate to the reservation section
+Fill out and submit a reservation form
+Check your Supabase dashboard to see the reservation data
+7. Update API URL in Frontend
+Before deploying, update the API URL in reservation.js:
+
+Change this line:
+
+const response = await fetch('https://your-backend-url.onrender.com/api/reservations', {
+
+To your local backend:
+
+const response = await fetch('http://localhost:5000/api/reservations', {
+
+8. Verify Everything Works
+Frontend loads correctly
+Reservation form submits successfully
+Data appears in Supabase
+No console errors
+9. Prepare for Deployment
+Once local testing is complete:
+
+Frontend Deployment (Vercel):
+
+Push code to GitHub
+Connect repo to Vercel
+Deploy (vercel.json handles routing)
+Backend Deployment (Render):
+
+Push code to GitHub
+Connect repo to Render
+Set environment variables in Render dashboard
+Deploy
+Update Frontend API URL:
+
+Change the fetch URL in reservation.js to your Render backend URL
+Update CORS in backend .env with your Vercel frontend URL
+Troubleshooting
+Backend won't start: Check if all dependencies are installed (npm install)
+Supabase connection fails: Verify URL and key in .env
+CORS errors: Update FRONTEND_URL in backend
+Reservation not saving: Check Supabase table and policies
